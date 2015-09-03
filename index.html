@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<title>Frankenstein</title>
+		
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" href="styles.css" />
+
+	</head>
+
+	<body>
+
+        <section id="1" class="first-part">
+
+            <table id="news-feeds-table">
+                <tr id="news-feeds-head">
+                    <th>ID</th>
+                    <th>Канал новостей</th>
+                    <th>Ссылка на новости канала</th>
+                    <th>Действия</th>
+                </tr>
+            </table>
+
+            <form id="news-feeds-form">
+                <div class="item text">
+                    <label>Название канала новостей:</label>
+                    <div class="field"><input type="text" name="news_feed_name" /></div>
+                </div>
+                <div class="item text">
+                    <label>Ссылка на данный канал:</label>
+                    <div class="field"><input type="text" name="news_feed_link" /></div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="item button">
+                        <div class="field"><input type="button" id="news-feeds-op-discard" value="Очистить" /></div>
+                    </div>
+                    <div class="item button button-default">
+                        <div class="field"><input type="submit" id="news-feeds-op-save" value="Сохранить" /></div>
+                    </div>
+                </div>
+                <input type="hidden" name="id_entry" value="0" />
+            </form>
+
+        </section>
+
+        <section id="2" class="second-part">
+
+            <h2>Список сообщений в выбранном канале:</h2>
+
+            <div class="content-counts">Список сообщений: <b><span></span></b></div>
+
+            <div class="news-posts"></div>
+
+        </section>
+
+        <section id="3" class="third-part">
+
+            <h2>Просмотр выбранного сообщения:</h2>
+
+            <h3></h3>
+
+            <div id="context">
+
+            </div>
+
+        </section>
+
+        <section id="4" class="fourth-part">
+
+            <div id="air" style="width: 500px; height: 400px;"></div>
+
+        </section>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="script.js"></script>
+
+	</body>
+</html>
