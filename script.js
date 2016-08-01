@@ -4,7 +4,7 @@
     var lists = $('td > a'),
         descriptionStr,
         readMore = $('span.read-more'),
-        readMoreTitle = $('#3 > h3'),
+        readMoreTitle = $('#3').find('h3'),
         getStatistic = $('.get-statistics'),
         dataArrResults,
         newsFeeds = {
@@ -16,9 +16,9 @@
             init: function () {
 
                 newsFeeds.form.reset();
-                newsFeeds.buttonDiscard.addEventListener("click", function (event) {
+                newsFeeds.buttonDiscard.addEventListener("click", function () {
                     newsFeeds.form.reset();
-                    newsFeeds.form.id_entry.value = 0;
+                    newsFeeds.form.id_entry.value = 1;
                 }, true);
                 newsFeeds.form.addEventListener("submit", function (event) {
                     var entry = {
@@ -259,6 +259,7 @@
             letterPercent.push(lettersCountArr[i]);
         }
 
+        var google;
         data = google.visualization.arrayToDataTable(letterPercent,false);
 
         options = {
